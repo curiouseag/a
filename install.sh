@@ -23,6 +23,8 @@ ARCH=$(uname -m)
 
 echo "[INFO] Credit goes to Corbin Davenport"
 echo "[INFO] https://github.com/corbindavenport"
+echo "[INFO] Credit goes to Gianluca Boiano"
+echo "[INFO] https://github.com/M0Rf30"
 echo "[INFO] Nexus Tools 2.4.1"
 echo "[INFO] Please enter sudo password for install."
 sudo echo "[ OK ] Sudo access granted."
@@ -54,7 +56,7 @@ if [ "$(uname)" == "Darwin" ]; then # Mac OS X
         if [ ! -d /etc/udev/rules.d/ ]; then
             sudo mkdir /etc/udev/rules.d/
         fi
-        sudo curl -s -o $UDEV "http://github.com/corbindavenport/nexus-tools/raw/master/udev.txt" -LOk
+        sudo curl -s -o $UDEV "http://github.com/locino/udev/blob/master/udev.txt" -LOk
         sudo chmod 644 $UDEV
         sudo chown root. $UDEV 2>/dev/null
         sudo service udev restart 2>/dev/null
@@ -92,7 +94,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then # Generic Linux
         if [ ! -d /etc/udev/rules.d/ ]; then
             sudo mkdir /etc/udev/rules.d/
         fi
-        sudo curl -s -o $UDEV "http://github.com/corbindavenport/nexus-tools/raw/master/udev.txt" -LOk
+        sudo curl -s -o $UDEV "http://github.com/locino/udev/blob/master/udev.txt" -LOk
         sudo chmod 644 $UDEV
         sudo chown root. $UDEV 2>/dev/null
         sudo service udev restart 2>/dev/null
