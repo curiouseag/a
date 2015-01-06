@@ -56,7 +56,7 @@ if [ "$(uname)" == "Darwin" ]; then # Mac OS X
         if [ ! -d /etc/udev/rules.d/ ]; then
             sudo mkdir /etc/udev/rules.d/
         fi
-        sudo curl -s -o $UDEV "http://github.com/locino/udev/blob/master/udev.txt" -LOk
+        sudo curl -s -o $UDEV "http://raw.githubusercontent.com/kfso/w/i/udev.txt" -LOk
         sudo chmod 644 $UDEV
         sudo chown root. $UDEV 2>/dev/null
         sudo service udev restart 2>/dev/null
@@ -94,7 +94,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then # Generic Linux
         if [ ! -d /etc/udev/rules.d/ ]; then
             sudo mkdir /etc/udev/rules.d/
         fi
-        sudo curl -s -o $UDEV "http://github.com/locino/udev/blob/master/udev.txt" -LOk
+        sudo curl -s -o $UDEV "http://raw.githubusercontent.com/kfso/w/i/udev.txt" -LOk
         sudo chmod 644 $UDEV
         sudo chown root. $UDEV 2>/dev/null
         sudo service udev restart 2>/dev/null
